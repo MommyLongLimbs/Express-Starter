@@ -115,6 +115,7 @@ function Items() {
                                         ? <VirtualizedList options={item} />
                                         : <Typography>No items are found</Typography>
                                 }
+                                <Typography style={{ float: 'left', color: '#9d9d9e' }} className='font-size-12'>total items: {searchList?.length}</Typography>
                             </Grid>
                             : <Grid item sm={12} md={12} lg={6}>
                                 {
@@ -122,6 +123,7 @@ function Items() {
                                         ? <VirtualizedList options={items} />
                                         : <Typography>No items are found</Typography>
                                 }
+                                <Typography style={{ float: 'left', color: '#9d9d9e' }} className='font-size-12'>total items: {items?.length}</Typography>
                             </Grid>
                     }
                     {/* //? items */}
