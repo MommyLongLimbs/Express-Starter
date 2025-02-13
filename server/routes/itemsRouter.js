@@ -40,9 +40,9 @@ itemsRouter.post("/search", async (req, res, next) => {
         //? destructure req.body
         const { name } = req.body
 
+
         //? get item from the DB based on item name
         const item = await itemModel.find({ name: new RegExp(`^${name}$`, "i") })
-
 
         res.json({
             item

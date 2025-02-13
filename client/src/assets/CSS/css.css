@@ -1,5 +1,5 @@
 .margin5 {
-    margin: 5px;
+    margin: 5px !important
 }
 
 .black-font {
@@ -46,6 +46,10 @@
 
 .font-size-14 {
     font-size: 14px !important
+}
+
+.font-size-12 {
+    font-size: 12px !important
 }
  
 .full-width {

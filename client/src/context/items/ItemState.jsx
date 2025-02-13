@@ -3,7 +3,8 @@ import axios from 'axios'
 import ItemContext from './itemContext'
 import itemReducer from './itemReducer'
 import {
-    GET_ITEMS
+    GET_ITEMS,
+    SEARCH_ITEM
 } from '../../types'
 
 const ItemState = props => {
@@ -44,7 +45,7 @@ const ItemState = props => {
         try {
 
             //? api call
-            const result = await axios.post(`/api/items/search`)
+            const result = await axios.post(`/api/items/search`, formData)
 
             //? dispatch to reducer
             dispatch({

@@ -1,5 +1,6 @@
 import {
-    GET_ITEMS
+    GET_ITEMS,
+    SEARCH_ITEM
 } from '../../types'
 
 export default (state, action) => {
