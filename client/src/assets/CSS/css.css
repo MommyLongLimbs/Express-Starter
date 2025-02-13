@@ -1,0 +1,53 @@
+.margin5 {
+    margin: 5px;
+}
+
+.black-font {
+    color: #3d3d3d;
+}
+
+.login-box {
+    background-color: #ebe8e8;
+    width: 400px;
+    margin: auto;
+    padding: 50px;
+    border-radius: 2%;
+}
+
+.login-title {
+    float: left;
+    padding-bottom: 10px;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.err {
+    background-color: #e6c1c1 !important;
+    color: #d12828 !important;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: #d12828;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+}
+
+
+.success {
+    background-color: #c1e6c1 !important;
+    color: #2ed128 !important;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: #2ed128;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.font-size-14 {
+    font-size: 14px !important
+}
+ 
+.full-width {
+    width: 100% !important
+}

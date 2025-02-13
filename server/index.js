@@ -6,10 +6,13 @@ const dotenv = require("dotenv");
 const moment = require("moment");
 const path = require("path");
 const session = require("express-session");
+const mongoose = require('mongoose')
+const userSchema = require('./schemas/userSchema')
 
 // Routes
 const testRouter = require("./routes/testRouter");
 const mainRouter = require("./routes/mainRouter");
+const itemsRouter = require("./routes/itemsRouter");
 
 // Project-made Modules
 const sessionOptions = require("./helpers/sessionOptions");
@@ -56,12 +59,25 @@ const reqLog = (req, res, next) => {
 	console.log(req);
 };
 
+
+//~ connect mongo
+mongoose
+	.connect(`mongodb://${process.env.ip}:27017/Test`, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
+	.then(() => console.log("MongoDB Connected"))
+	.catch((err) => console.log(err));
+
+
+
 // Static
 app.use(express.static(path.join(__dirname, "/public")));
 
 // Seperate Routes
 app.use("/test", testRouter);
-app.use("/", mainRouter);
+app.use("/auth/", mainRouter);
+app.use("/items/", itemsRouter);
 
 // Error handling
 app.use(async (err, req, res, next) => {
