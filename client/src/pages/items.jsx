@@ -41,7 +41,7 @@ function Items() {
 
     //? useeffect for logging
     useEffect(() => {
-        console.log(searchList)
+        // console.log(searchList)
     })
 
 
